@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxygen&family=Source+Sans+Pro&display=swap");
+
 /* Page Structure */
 
 body {
@@ -9,14 +11,52 @@ body {
 main {
   text-align: center;
   color: white;
+  height: 100%;
+}
+
+.row {
+  height: 96vh;
+  padding-bottom: 3vh;
+  padding-top: 3vh;
+  padding-left: 3vh;
+  padding-right: 3vh;
 }
 
 .col {
-  border-style: solid;
+  height: 100%;
 }
 
 .col .block {
   height: 100%;
+}
+
+.news {
+  height: 44vh;
+}
+
+.finance {
+  height: 44vh;
+}
+
+.caption {
+  height: 6vh;
+  text-align: center;
+}
+
+.greeting {
+  height: 76vh;
+}
+
+.favorites {
+  height: 20vh;
+}
+
+.weather {
+  height: 88vh;
+}
+
+.settings {
+  height: 6vh;
 }
 
 /* Wallpaper */
