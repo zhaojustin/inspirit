@@ -1,7 +1,32 @@
+/* Page Structure */
+
 body {
-  padding-top: 5rem;
+  margin: 0;
+  height: 100%;
+  width: 100%;
 }
-.starter-template {
-  padding: 3rem 1.5rem;
+
+main {
   text-align: center;
+  color: white;
+}
+
+.col {
+  border-style: solid;
+}
+
+.col .block {
+  height: 100%;
+}
+
+/* Wallpaper */
+.wallpaper {
+  z-index: -1;
+  filter: blur(1.5px);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(rgba(20, 20, 20, 0.5), rgba(20, 20, 20, 0.5)),
+    url("https://source.unsplash.com/collection/214321/1920x1080/daily");
+  background-size: cover;
 }
