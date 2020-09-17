@@ -111,7 +111,19 @@ main {
 }
 
 .settings i {
-  font-size: 2em;
+  font-size: 1.75em;
+}
+
+.rotate {
+  -moz-transition: all 0.75s ease-in-out;
+  -webkit-transition: all 0.75s ease-in-out;
+  transition: all 0.75s ease-in-out;
+}
+
+.rotate.down {
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 /* Wallpaper */

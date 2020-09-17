@@ -1,4 +1,4 @@
-//clock---------------------------
+//---------------------------Clock---------------------------
 var timeFormat = false;
 let months = [
   "January",
@@ -41,7 +41,7 @@ function updateClock() {
 //initiate clock
 updateClock();
 
-//News---------------------------
+//---------------------------News---------------------------
 
 var titles = new Array();
 var links = new Array();
@@ -85,11 +85,24 @@ async function setNews() {
 
 //setNews();
 
-//Weather---------------------------
+//---------------------------Settings---------------------------
+
+//init micromodal
+MicroModal.init();
+
+//cog rotate on click
+$(".rotate").click(function () {
+  $(this).toggleClass("down");
+});
+
+//open settings modal
+$(".cog").click(function () {
+  MicroModal.show("settings-modal");
+});
+
+//---------------------------Weather---------------------------
 
 var weather = new Array();
-var lat = 0;
-var lon = 0;
 
 //news api
 function weatherBalloon(cityID) {
@@ -111,23 +124,7 @@ function weatherBalloon(cityID) {
     });
 }
 
-//set returned json to arrays
-async function setNews() {
-  await getNews();
-  titles = titles;
-  links = links;
-
-  console.log(titles);
-  console.log(links);
-
-  var headlines = document.getElementsByClassName("headline");
-  for (var i = 0; i < headlines.length; i++) {
-    headlines[i].innerHTML = titles[i];
-    headlines[i].href = links[i];
-  }
-}
-
-//Window On Load
+//---------------------------Window On Load---------------------------
 
 window.onload = function () {
   //weatherBalloon(6167865);
