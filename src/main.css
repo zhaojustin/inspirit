@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Oxygen&family=Source+Sans+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&display=swap");
 
 /* Page Structure */
 
@@ -6,6 +6,8 @@ body {
   margin: 0;
   height: 100%;
   width: 100%;
+
+  font-family: "Poppins";
 }
 
 main {
@@ -30,36 +32,104 @@ main {
   height: 100%;
 }
 
+/* General */
+
+h1 {
+  font-family: "Poppins";
+}
+
+/* News */
+
 .news {
   height: 44vh;
 }
 
-.finance {
+.news h2 {
+  font-size: 1.6em;
+}
+
+.news a {
+  color: #6c757d;
+}
+
+.news a::before {
+  background-color: #6c757d;
+}
+
+.news .headline {
+  color: white;
+  text-align: left;
+  font-size: 0.8em;
+  padding-top: 0.5em;
+}
+
+.news .headline {
+  color: white;
+}
+
+.news .headline::before {
+  background-color: white;
+}
+
+/* Stocks */
+
+.stocks {
   height: 44vh;
 }
+
+/* Caption */
 
 .caption {
   height: 6vh;
   text-align: center;
 }
 
+.caption a {
+  color: #6c757d;
+}
+
+.caption a::before {
+  background-color: #6c757d;
+}
+
+/* Greeting */
+
 .greeting {
   height: 76vh;
 }
+
+.greeting h1 {
+  font-size: 10em;
+}
+
+.greeting h2 {
+  font-size: 1.6em;
+}
+
+/* Favorites */
 
 .favorites {
   height: 20vh;
 }
 
+/* Weather */
+
 .weather {
   height: 88vh;
 }
+
+/* Settings */
 
 .settings {
   height: 6vh;
 }
 
+.settings i {
+  font-size: 2em;
+}
+
 /* Wallpaper */
+
 .wallpaper {
   z-index: -1;
   filter: blur(1.5px);
@@ -69,4 +139,33 @@ main {
   background: linear-gradient(rgba(20, 20, 20, 0.5), rgba(20, 20, 20, 0.5)),
     url("https://source.unsplash.com/collection/214321/1920x1080/daily");
   background-size: cover;
+}
+
+/* Link Hover Effect */
+
+a {
+  text-decoration: none;
+  position: relative;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.2s ease-in-out 0s;
+}
+
+a:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
 }
