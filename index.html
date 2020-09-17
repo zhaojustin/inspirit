@@ -14,8 +14,6 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
         crossorigin="anonymous"></script>
-    <!-- MicroModal CSS -->
-    <link rel="stylesheet" href="src/modal.css">
     <!-- Bootstrap CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -40,10 +38,9 @@
                             <div class="d-flex align-items-start flex-column">
                                 <!-- Header -->
                                 <h2>News</h2>
-                                <h3>
+                                <small class="text-muted">
                                     Source: <a href="https://www.wsj.com">Wall Street Journal</a>
-                                </h3>
-                                <br>
+                                </small>
                                 <a class="headline"></a>
                                 <a class="headline"></a>
                                 <a class="headline"></a>
@@ -51,9 +48,6 @@
                                 <a class="headline"></a>
                                 <a class="headline"></a>
                             </div>
-                        </div>
-                        <div class="stocks">
-                            Stocks
                         </div>
                         <div class="d-flex align-items-end caption">
                             <small class="text-muted">
@@ -95,10 +89,6 @@
 
     </main>
     <!-- /.container -->
-
-    <!-- MicroModal JS -->
-    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
-    <script>MicroModal.init();</script>
 
     <!-- Main JS -->
     <script src="src/main.js"></script>

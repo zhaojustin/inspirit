@@ -83,4 +83,52 @@ async function setNews() {
   }
 }
 
-setNews();
+//setNews();
+
+//Weather---------------------------
+
+var weather = new Array();
+var lat = 0;
+var lon = 0;
+
+//news api
+function weatherBalloon(cityID) {
+  var key = "{cf6e5251b167797a7615f9c3a96aab76}";
+  fetch(
+    "https://api.openweathermap.org/data/2.5/weather?id=" +
+      cityID +
+      "&appid=" +
+      key
+  )
+    .then(function (resp) {
+      return resp.json();
+    }) // Convert data to json
+    .then(function (data) {
+      console.log(data);
+    })
+    .catch(function () {
+      // catch any errors
+    });
+}
+
+//set returned json to arrays
+async function setNews() {
+  await getNews();
+  titles = titles;
+  links = links;
+
+  console.log(titles);
+  console.log(links);
+
+  var headlines = document.getElementsByClassName("headline");
+  for (var i = 0; i < headlines.length; i++) {
+    headlines[i].innerHTML = titles[i];
+    headlines[i].href = links[i];
+  }
+}
+
+//Window On Load
+
+window.onload = function () {
+  //weatherBalloon(6167865);
+};

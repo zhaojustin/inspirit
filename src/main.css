@@ -37,7 +37,7 @@ main {
 /* News */
 
 .news {
-  height: 44vh;
+  height: 88vh;
 }
 
 .news h2 {
@@ -63,12 +63,6 @@ main {
   color: #bbbbbb;
 }
 
-/* Stocks */
-
-.stocks {
-  height: 44vh;
-}
-
 /* Caption */
 
 .caption {
@@ -77,11 +71,11 @@ main {
 }
 
 .caption a {
-  color: #6c757d;
+  color: #bbbbbb;
 }
 
 .caption a::before {
-  background-color: #6c757d;
+  background-color: #bbbbbb;
 }
 
 /* Greeting */
