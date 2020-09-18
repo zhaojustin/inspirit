@@ -112,6 +112,11 @@ main {
 
 .settings i {
   font-size: 1.75em;
+  cursor: pointer;
+}
+
+.modal .section {
+  width: 100%;
 }
 
 .rotate {
